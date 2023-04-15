@@ -20,15 +20,22 @@ namespace Makarovsky_tomogram_visualizer
       InitializeComponent();
     }
 
-
+    void Application_Idle(object sender, EventArgs e)
+    {
+       while (glControl1.IsIdle)
+         glControl1.Refresh();
+    }
 
     private void glControl1_Load(object sender, EventArgs e)
     {
       glGraphics.Resize(glControl1.Width, glControl1.Height);
+      Application.Idle += Application_Idle;
     }
 
     private void glControl1_Paint(object sender, PaintEventArgs e)
     {
+      int texID = glGraphics.LoadTexture("cat.jpeg");
+      glGraphics.texturesIDs.Add(texID);
       glGraphics.Update();
       glControl1.SwapBuffers();
     }
@@ -39,6 +46,11 @@ namespace Makarovsky_tomogram_visualizer
       float heightCoef = (-e.Y + glControl1.Height * 0.5f) / (float)glControl1.Height;
       glGraphics.latitude = (heightCoef * 180);
       glGraphics.longitude = (widthCoef * 360);
+      glControl1.Refresh();
+    }
+
+    private void glControl1_MouseDown(object sender, MouseEventArgs e)
+    {
 
     }
   }
