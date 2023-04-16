@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Makarovsky_tomogram_visualizer", "Makarovsky_tomogram_visualizer.csproj", "{5AB4A916-D9FF-4D2E-BC26-C3765A488592}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tomogram_real", "..\Tomogram_real\Tomogram_real.csproj", "{F9A48515-659E-45B7-8559-717C8EE2D3C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5AB4A916-D9FF-4D2E-BC26-C3765A488592}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AB4A916-D9FF-4D2E-BC26-C3765A488592}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AB4A916-D9FF-4D2E-BC26-C3765A488592}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9A48515-659E-45B7-8559-717C8EE2D3C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9A48515-659E-45B7-8559-717C8EE2D3C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9A48515-659E-45B7-8559-717C8EE2D3C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9A48515-659E-45B7-8559-717C8EE2D3C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
