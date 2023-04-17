@@ -30,12 +30,14 @@
     {
       this.glControl1 = new OpenTK.GLControl();
       this.groupBox1 = new System.Windows.Forms.GroupBox();
+      this.trackBar1 = new System.Windows.Forms.TrackBar();
       this.menuStrip1 = new System.Windows.Forms.MenuStrip();
       this.openFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-      this.trackBar1 = new System.Windows.Forms.TrackBar();
+      this.radioButton1 = new System.Windows.Forms.RadioButton();
+      this.radioButton2 = new System.Windows.Forms.RadioButton();
       this.groupBox1.SuspendLayout();
-      this.menuStrip1.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+      this.menuStrip1.SuspendLayout();
       this.SuspendLayout();
       // 
       // glControl1
@@ -52,6 +54,8 @@
       // 
       // groupBox1
       // 
+      this.groupBox1.Controls.Add(this.radioButton2);
+      this.groupBox1.Controls.Add(this.radioButton1);
       this.groupBox1.Controls.Add(this.trackBar1);
       this.groupBox1.Controls.Add(this.menuStrip1);
       this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -60,6 +64,14 @@
       this.groupBox1.Size = new System.Drawing.Size(1573, 81);
       this.groupBox1.TabIndex = 3;
       this.groupBox1.TabStop = false;
+      // 
+      // trackBar1
+      // 
+      this.trackBar1.Location = new System.Drawing.Point(97, 36);
+      this.trackBar1.Name = "trackBar1";
+      this.trackBar1.Size = new System.Drawing.Size(1211, 45);
+      this.trackBar1.TabIndex = 1;
+      this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
       // 
       // menuStrip1
       // 
@@ -78,13 +90,27 @@
       this.openFileToolStripMenuItem.Text = "Open file";
       this.openFileToolStripMenuItem.Click += new System.EventHandler(this.openFileToolStripMenuItem_Click);
       // 
-      // trackBar1
+      // radioButton1
       // 
-      this.trackBar1.Location = new System.Drawing.Point(1244, 16);
-      this.trackBar1.Name = "trackBar1";
-      this.trackBar1.Size = new System.Drawing.Size(215, 45);
-      this.trackBar1.TabIndex = 1;
-      this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+      this.radioButton1.AutoSize = true;
+      this.radioButton1.Location = new System.Drawing.Point(1314, 43);
+      this.radioButton1.Name = "radioButton1";
+      this.radioButton1.Size = new System.Drawing.Size(56, 17);
+      this.radioButton1.TabIndex = 2;
+      this.radioButton1.TabStop = true;
+      this.radioButton1.Text = "Quads";
+      this.radioButton1.UseVisualStyleBackColor = true;
+      // 
+      // radioButton2
+      // 
+      this.radioButton2.AutoSize = true;
+      this.radioButton2.Location = new System.Drawing.Point(1405, 43);
+      this.radioButton2.Name = "radioButton2";
+      this.radioButton2.Size = new System.Drawing.Size(61, 17);
+      this.radioButton2.TabIndex = 3;
+      this.radioButton2.TabStop = true;
+      this.radioButton2.Text = "Texture";
+      this.radioButton2.UseVisualStyleBackColor = true;
       // 
       // Form1
       // 
@@ -96,11 +122,12 @@
       this.MainMenuStrip = this.menuStrip1;
       this.Name = "Form1";
       this.Text = "Form1";
+      this.Load += new System.EventHandler(this.Form1_Load);
       this.groupBox1.ResumeLayout(false);
       this.groupBox1.PerformLayout();
+      ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
       this.menuStrip1.ResumeLayout(false);
       this.menuStrip1.PerformLayout();
-      ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
       this.ResumeLayout(false);
 
     }
@@ -112,6 +139,8 @@
     private System.Windows.Forms.MenuStrip menuStrip1;
     private System.Windows.Forms.ToolStripMenuItem openFileToolStripMenuItem;
     private System.Windows.Forms.TrackBar trackBar1;
+    private System.Windows.Forms.RadioButton radioButton2;
+    private System.Windows.Forms.RadioButton radioButton1;
   }
 }
 
